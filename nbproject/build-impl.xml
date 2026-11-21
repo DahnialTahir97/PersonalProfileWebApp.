@@ -15,7 +15,7 @@
 
     <target name="compile" depends="init">
         <javac srcdir="src/java" destdir="${build.classes.dir}"
-               includeantruntime="false" source="1.7" target="1.7"
+               includeantruntime="false" source="1.8" target="1.8"
                encoding="UTF-8">
             <classpath>
                 <pathelement path="${javac.classpath}"/>
