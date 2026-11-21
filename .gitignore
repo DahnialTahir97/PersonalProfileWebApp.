@@ -1,0 +1,13 @@
+# NetBeans / Ant generated files
+/build/
+/dist/
+/nbproject/private/
+
+# Compiled and temporary files
+*.class
+*.log
+*.tmp
+
+# OS/editor files
+.DS_Store
+Thumbs.db
