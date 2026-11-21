@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="-deploy-ant" default="-deploy-ant" basedir=".">
-    <target name="-deploy-ant">
-        <echo message="Deployment is configured through NetBeans and GlassFish."/>
-    </target>
-</project>
