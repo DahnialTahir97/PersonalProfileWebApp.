@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PersonalProfileWebApp-impl" default="default" basedir="..">
+    <property file="nbproject/project.properties"/>
+    <property name="build.dir" value="build"/>
+    <property name="build.classes.dir" value="${build.dir}/web/WEB-INF/classes"/>
+    <property name="build.web.dir" value="${build.dir}/web"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="dist.war" value="${dist.dir}/PersonalProfileWebApp.war"/>
+
+    <target name="init">
+        <mkdir dir="${build.classes.dir}"/>
+        <mkdir dir="${build.web.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="src/java" destdir="${build.classes.dir}"
+               includeantruntime="false" source="1.7" target="1.7"
+               encoding="UTF-8">
+            <classpath>
+                <pathelement path="${javac.classpath}"/>
+                <pathelement path="${j2ee.platform.classpath}"/>
+            </classpath>
+        </javac>
+        <copy todir="${build.web.dir}">
+            <fileset dir="web"/>
+        </copy>
+    </target>
+
+    <target name="war" depends="compile">
+        <jar destfile="${dist.war}" basedir="${build.web.dir}"/>
+    </target>
+
+    <target name="dist" depends="war"/>
+    <target name="default" depends="dist"/>
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+</project>
